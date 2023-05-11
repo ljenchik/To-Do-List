@@ -65,10 +65,10 @@ app.post("/delete", async function (req, res) {
   const checkedBox = req.body.checkbox;
 
   if (listName === day) {
-    Item.deleteOne({_id: checkedBox});
+    Item.deleteOne({_id: checkedBox}).then(console.log("Deleted!"));
     res.redirect("/");
   } else {
-    List.findOneAndUpdate({listName: listName}, {$pull: {items: {_id: checkedBox}}});
+    List.findOneAndUpdate({listName: listName}, {$pull: {items: {_id: checkedBox}}}).then(console.log("Deleted!"));;
     res.redirect("/"+listName);
   }
 });
