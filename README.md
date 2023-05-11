@@ -21,7 +21,7 @@ Node.js, Express, body-parser, MongoDB, mongoose, ejs, Docker
 From command line
  
 ```bash
- git clone git@github.com:ljenchik/To-Do-List.git
+ git clone https://github.com/ljenchik/To-Do-List.git
  docker run -d -p 27017:27017 --name test-mongo mongo:latest
  npm install
  nodemon app.js
