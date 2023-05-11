@@ -9,16 +9,29 @@ The application has a user-friendly interface that enables users to easily add n
 
 Node.js, Express, body-parser, MongoDB, mongoose, ejs, Docker
 
+
+
+## Required software
+
+- Docker
+- Node.js
+
+## To run the application
+
+From command line
+ 
+```bash
+ git clone git@github.com:ljenchik/To-Do-List.git
+ docker run -d -p 27017:27017 --name test-mongo mongo:latest
+ npm install
+ nodemon app.js
+```
+
 ## Usage
 
 - The default list allows a user to add tasks under a current date
 - Clicking on the checkbox enables a user to delete a task
 - In order to create a custom list, such as "Shopping," a user must add the corresponding name to the URL localhost:3000/Shopping
-
-## How to install
-
-
-
 
 
 ## Acnowledgements
