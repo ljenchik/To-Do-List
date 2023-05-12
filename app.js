@@ -12,9 +12,15 @@ app.use(express.static("public"));
 // All .ejs must be in view folder
 app.set("view engine", "ejs");
 
-mongoose.connect("mongodb://localhost:27017/todolistDB", {
+// mongoose.connect("mongodb://localhost:27017/todolistDB", {
+//   useNewUrlParser: true,
+// });
+
+mongoose.connect("mongodb+srv://olena:1234@cluster0.h0n8umz.mongodb.net/todolistDB", {
   useNewUrlParser: true,
 });
+
+
 
 const itemsSchema = new mongoose.Schema({
   name: String,
