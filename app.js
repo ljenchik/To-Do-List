@@ -20,8 +20,7 @@ mongoose.connect("mongodb+srv://olena:1234@cluster0.h0n8umz.mongodb.net/todolist
   useNewUrlParser: true,
 });
 
-
-
+// Schemas
 const itemsSchema = new mongoose.Schema({
   name: String,
 });
@@ -33,14 +32,15 @@ const listsSchema = new mongoose.Schema({
 });
 const List = mongoose.model("List", listsSchema);
 
+// Date format
 const options = {
   weekday: "long",
   year: "numeric",
   month: "long",
   day: "numeric",
 };
-
 let day = new Date().toLocaleDateString("en-us", options);
+
 
 app.get("/", function (req, res) {
   Item.find({}).then(function (storedItems) {
